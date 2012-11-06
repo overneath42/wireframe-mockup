@@ -12,28 +12,28 @@
 	margin-top: 0;
 }
 
-// wireframing
+// placeholder classes for wireframing
 
 %main-structure {
-	@include outline(#f00);
+	@include outline(#f00); // red
 }
 
 %section {
-	@include outline(#fc0);
+	@include outline(#fc0); // orange
 }
 
 %subsection {
-	@include outline(#ff0);
+	@include outline(#ff0); // yellow
 }
 
 %nav {
-	@include outline(#0f0);
+	@include outline(#0f0); // green
 }
 
 %form {
-	@include outline(#f0f);
+	@include outline(#f0f); // magenta
 }
 
 %widget {
-	@include outline(#0bf);
+	@include outline(#0bf); // blue
 }

@@ -1,0 +1,11 @@
+// set up Semantic Grid
+
+$column-width: 60px;
+$gutter-width: 20px;
+$columns: 12;
+$total-width: 100%;
+
+* { @include box-sizing(border-box); }
+
+html { font-family: sans-serif; }
+body { margin-top: 50px; }

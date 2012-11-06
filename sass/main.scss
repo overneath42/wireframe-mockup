@@ -1,7 +1,7 @@
 @charset "UTF-8";
-/*------------------------------------*\
-    Monty's Plant Food -- Wireframes
-\*------------------------------------*/
+/*------------------------------*\
+    Wireframe Template System
+\*------------------------------*/
 
 // inuit.css - http://inuitcss.com/
 @import "vars";
@@ -14,9 +14,6 @@
 @import "compass";
 
 // custom imports
-@import "montys/mixins";
-@import "montys/layout";
-@import "montys/ie";
-
-// theme switcher for presentation
-@import "tiles/partials/switcher";
+@import "wireframe/mixins";
+@import "wireframe/layout";
+@import "wireframe/ie";
