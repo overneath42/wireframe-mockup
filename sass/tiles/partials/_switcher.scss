@@ -1,0 +1,25 @@
+// theme switcher
+
+.container { z-index: 50 !important; }
+
+.switcher {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 50px;
+	padding: 12px $base-spacing-unit +px;
+	background: #444;
+	z-index: 1000;
+}
+
+.switcher-title {
+	float: left;
+	font-size: 1.4em;
+	line-height: 1em;
+	color: #ddd;
+	text-transform: uppercase;
+}
+
+.switcher-select {
+	float: right;
+}

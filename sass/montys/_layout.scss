@@ -1,0 +1,316 @@
+// set up Semantic Grid
+
+$column-width: 60px;
+$gutter-width: 20px;
+$columns: 12;
+$total-width: 100%;
+
+* { @include box-sizing(border-box); }
+
+html { font-family: sans-serif; }
+
+body { margin-top: 50px; }
+
+.container {
+	@extend %center-relative;
+	@extend %main-structure;
+	margin-top: 0;
+	max-width: 1180px;
+}
+
+.header {
+	@extend .cf;
+	position: relative;
+	margin-bottom: 0;
+	padding-top: 60px;
+	@extend %section;
+
+	.logo {
+		float: left;
+		width: 42%;
+		max-width: 175px;
+		margin-right: $half-spacing-unit +px;
+	}
+}
+
+.main-nav {
+	@extend %nav;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	padding: $half-spacing-unit +px $base-spacing-unit +px;
+	background: #fff;
+	opacity: 0;
+	@include transition-property(all);
+	@include transition-duration(0.25s);
+
+	.nav {
+		margin: 0;
+		padding: 0;
+
+		> li {
+			padding: ($half-spacing-unit/2 +px) 0;
+			display: list-item;
+
+			> a {
+				display: block;
+			}
+		}
+
+		.menu-head {
+			text-align: center;
+			margin: 0;
+			cursor: pointer;
+			margin-top: $half-spacing-unit/2 +px;
+		}
+	}
+}
+
+.sub-nav {
+	@extend %nav;
+	display: none;
+}
+
+.search {
+	@extend .cf;
+	@extend %form;
+	float: left;
+	width: 50%;
+	display: table;
+
+	.text-input {
+		float: left;
+		width: 60%;
+		margin-right: 0.5em;
+	}
+
+	input[type="submit"] {
+		float: left;
+	}
+}
+
+.wrapper {
+	@extend .cf;
+}
+
+.main-home, .main {
+	@extend %section;
+	@extend .cf;
+}
+
+.promo {
+	@extend %section;
+	margin-bottom: 0;
+}
+
+.product-lede {
+	> img { display: none; }
+}
+
+.portals-home {
+	@extend %section;
+	overflow: hidden;
+	margin-bottom: 0;
+}
+
+.subsection {
+	@extend %subsection;
+}
+
+.title {
+	@extend %no-top-margin;
+	line-height: 1.2em;
+}
+
+.dl-list{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	.pdf {
+		display: inline-block;
+		height: 10px;
+		width: 10px;
+		background: #fc0;
+	}
+}
+
+.btn__link {
+	border: 1px solid #aaa;
+	margin-bottom: $base-spacing-unit +px;
+	&.dl {
+		@include font-size(18);
+	}
+}
+
+.gallery-wrap {
+	@extend .cf;
+	max-width: 636px;
+	> img {
+		float: left;
+		margin: 0 $half-spacing-unit +px $half-spacing-unit +px 0;
+	}
+}
+
+.sidebar {
+	@extend %section;
+}
+
+.news-home, .news {
+	@extend %section;
+	@extend .cf;
+	margin-bottom: 0;
+
+	.title {
+		@extend %no-top-margin;
+	}
+
+	.widget {
+		@extend %widget;
+	}
+}
+
+.footer {
+	@extend %section;
+
+	p {
+		margin: 0;
+	}
+}
+
+@media screen and (min-width: 37.5em) {
+
+.subsection {
+	float: left;
+	width: (100% - percentage($base-spacing-unit/600))/2;
+	&:nth-child(2n+1) {
+		clear: both;
+		margin-right: percentage($base-spacing-unit/600);
+	}
+}
+
+.news-home {
+	.widget {
+		float: left;
+		width: (100% - percentage($base-spacing-unit/600))/2;
+		&:nth-child(2n) {
+			clear: both;
+			margin-right: percentage($base-spacing-unit/600);
+		}
+	}
+}
+
+.news {
+	.widget {
+		display: block;
+	}
+}
+
+}
+
+@media screen and (min-width: 48em) {
+
+.header {
+	position: relative;
+	padding-bottom: 0;
+	padding-top: 24px;
+
+	.logo {
+		float: left;
+		width: 175px;
+	}
+
+	.search {
+		float: right;
+		width: 35%;
+
+		.text-input {
+			width: 70%;
+		}
+	}
+}
+
+.main-nav {
+	clear: both;
+	position: static;
+	background: none;
+	display: table;
+	width: 100%;
+	@include opacity(1);
+
+	.nav {
+		display: table-row;
+		> li {
+			display: table-cell;
+			text-align: center;
+			padding: 3px;
+			&.mobile-only { display: none; }
+		}
+
+		.menu-head { display: none; }
+	}
+}
+
+.sub-nav {
+	display: block;
+	float: right;
+
+	.nav {
+		margin: 0;
+
+		> li:after {
+			content: "|";
+			position: relative;
+			margin: 0 0.5em;
+		}
+
+		li:last-child:after {
+			content: "";
+			position: absolute;
+		}
+	}
+}
+
+.main {
+	float: left;
+	width: 70%;
+}
+
+.product-lede {
+	> img {
+		display: block;
+		width: 175px;
+	}
+}
+
+.sidebar {
+	float: left;
+	width: 30%;
+}
+
+}
+
+@media screen and (min-width: 60em) {
+
+.portals-home {
+	float: left;
+	width: 70%;
+}
+
+.subsection {
+	float: none;
+	width: 85%;
+}
+
+.news-home {
+	float: left;
+	width: 30%;
+
+	.widget {
+		float: none;
+		width: 100%;
+	}
+}
+
+}

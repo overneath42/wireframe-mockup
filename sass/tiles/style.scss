@@ -1,0 +1,15 @@
+// import normalize.css first
+@import "partials/normalize";
+
+// import Compass and CSS3 add-on
+@import "compass";
+@import "compass/css3";
+
+// base template styling
+@import "partials/base";
+
+// create and import a separate partial for each tile option created
+@import "partials/tile1";
+@import "partials/tile2";
+@import "partials/tile3";
+@import "partials/tile4";

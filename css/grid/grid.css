@@ -1,0 +1,14 @@
+/* line 41, ../../sass/grid/grid.scss */
+body {
+  width: 100%;
+  *zoom: 1;
+}
+/* line 27, ../../sass/grid/grid.scss */
+body:before, body:after {
+  content: "";
+  display: table;
+}
+/* line 31, ../../sass/grid/grid.scss */
+body:after {
+  clear: both;
+}

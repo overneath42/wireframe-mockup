@@ -1,0 +1,188 @@
+// tile four
+
+@font-face {
+    font-family: 'Cardo';
+    src: url('fonts/cardo/Cardo104s-webfont.eot');
+    src: url('fonts/cardo/Cardo104s-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/cardo/Cardo104s-webfont.woff') format('woff'),
+         url('fonts/cardo/Cardo104s-webfont.ttf') format('truetype'),
+         url('fonts/cardo/Cardo104s-webfont.svg#CardoRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Cardo';
+    src: url('fonts/cardo/Cardoi99-webfont.eot');
+    src: url('fonts/cardo/Cardoi99-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/cardo/Cardoi99-webfont.woff') format('woff'),
+         url('fonts/cardo/Cardoi99-webfont.ttf') format('truetype'),
+         url('fonts/cardo/Cardoi99-webfont.svg#CardoItalic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+
+}
+
+@font-face {
+    font-family: 'Cardo';
+    src: url('fonts/cardo/Cardob101-webfont.eot');
+    src: url('fonts/cardo/Cardob101-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/cardo/Cardob101-webfont.woff') format('woff'),
+         url('fonts/cardo/Cardob101-webfont.ttf') format('truetype'),
+         url('fonts/cardo/Cardob101-webfont.svg#CardoBold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'OpenSansLight';
+    src: url('fonts/open-sans/OpenSans-Light-webfont.eot');
+    src: url('fonts/open-sans/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/open-sans/OpenSans-Light-webfont.woff') format('woff'),
+         url('fonts/open-sans/OpenSans-Light-webfont.ttf') format('truetype'),
+         url('fonts/open-sans/OpenSans-Light-webfont.svg#OpenSansLight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSansSemibold';
+    src: url('fonts/open-sans/OpenSans-Semibold-webfont.eot');
+    src: url('fonts/open-sans/OpenSans-Semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/open-sans/OpenSans-Semibold-webfont.woff') format('woff'),
+         url('fonts/open-sans/OpenSans-Semibold-webfont.ttf') format('truetype'),
+         url('fonts/open-sans/OpenSans-Semibold-webfont.svg#OpenSansSemibold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+@mixin cardo {
+	font-family: 'Cardo', "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
+}
+
+@mixin book_antiqua {
+	font-family: "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
+}
+
+@mixin open_sans_light {
+	font-family: 'OpenSansLight', "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+}
+
+@mixin open_sans_semibold {
+	font-family: 'OpenSansSemibold', "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	font-weight: bold;
+}
+
+$terra_rosa: rgb(228,85,79);
+$miso: rgb(99,74,77);
+$cement_gray: rgb(150,146,145);
+$cobblestone: rgb(178,171,165);
+$chinchilla: rgb(193,193,195);
+
+* { outline: none !important; }
+
+body { font-size: 62.5%; }
+
+.opt-4 {
+border: none;
+background: url(../img/striped_lens.png);
+// background-color: lighten($cobblestone, 28%);
+
+	h1 {
+		@include open_sans_light;
+		font-size: 4.5em;
+		font-weight: normal;
+        color: $terra_rosa;
+        text-shadow: 1px 1px 2px desaturate($terra_rosa, 50%);
+	}
+
+	h2 {
+		@include open_sans_semibold;
+		font-size: 1.8em;
+		text-transform: uppercase;
+        color: $miso;
+        letter-spacing: 0.06em;
+	}
+
+	h3 {
+		@include book_antiqua;
+		font-size: 1.6em;
+        color: $miso;
+	}
+
+	p {
+		@include book_antiqua;
+		font-size: 1.4em;
+		line-height: 1.4em;
+	}
+
+    .image {
+        margin: 1em 0 2em 2em;
+        @include border-radius(3px);
+        @include box-shadow(0 0 0 4px #fff, 0 0 0 5px lighten($cobblestone, 20%));
+    }
+
+    .colors {
+        .color-1 { background-color: $terra_rosa; }
+        .color-2 { background-color: $miso; }
+        .color-3 { background-color: $cement_gray; }
+        .color-4 { background-color: $cobblestone; }
+        .color-5 { background-color: $chinchilla; }
+    }
+
+
+	#form4 {
+    background-color: $chinchilla;
+    @include border-radius(6px);
+
+        fieldset {
+            border: none;
+        }
+
+        legend { display: none; }
+
+		label {
+			@include open_sans_semibold;
+			font-size: 1.6em;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+		}
+
+		input, textarea {
+			padding: 0.35em;
+			@include open_sans_light;
+			font-size: 1.8em;
+            border: none;
+            @include border-radius(3px);
+            @include transition-property(all);
+            @include transition-duration(0.3s);
+            &:focus {
+                background-color: lighten($terra_rosa, 35%);
+            }
+		}
+
+		input[type="submit"] {
+            padding: 0.625em;
+			@include open_sans_semibold;
+			font-size: 1.6em;
+            background-color: $terra_rosa;
+            color: #fff;
+            border: none;
+            @include border-radius(6px);
+            @include transition-property(all);
+            @include transition-duration(0.3s);
+            text-transform: uppercase;
+            &:hover {
+                background-color: saturate($terra_rosa, 25%);
+            }
+		}
+
+	}
+
+}
+
+

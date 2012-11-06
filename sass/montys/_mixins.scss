@@ -1,0 +1,39 @@
+@mixin outline($color) {
+	outline: 1px solid $color;
+}
+
+%center-relative {
+	display: block;
+	position: relative;
+	margin: auto;
+}
+
+%no-top-margin {
+	margin-top: 0;
+}
+
+// wireframing
+
+%main-structure {
+	@include outline(#f00);
+}
+
+%section {
+	@include outline(#fc0);
+}
+
+%subsection {
+	@include outline(#ff0);
+}
+
+%nav {
+	@include outline(#0f0);
+}
+
+%form {
+	@include outline(#f0f);
+}
+
+%widget {
+	@include outline(#0bf);
+}

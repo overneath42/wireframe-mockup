@@ -1,0 +1,109 @@
+// tile three
+
+@font-face {
+    font-family: 'TheanoOldStyleRegular';
+    src: url('fonts/theano-old-style/TheanoOldStyle-Regular-webfont.eot');
+    src: url('fonts/theano-old-style/TheanoOldStyle-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/theano-old-style/TheanoOldStyle-Regular-webfont.woff') format('woff'),
+         url('fonts/theano-old-style/TheanoOldStyle-Regular-webfont.ttf') format('truetype'),
+         url('fonts/theano-old-style/TheanoOldStyle-Regular-webfont.svg#TheanoOldStyleRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RosarivoRegular';
+    src: url('fonts/rosarivo/Rosarivo-Regular-webfont.eot');
+    src: url('fonts/rosarivo/Rosarivo-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/rosarivo/Rosarivo-Regular-webfont.woff') format('woff'),
+         url('fonts/rosarivo/Rosarivo-Regular-webfont.ttf') format('truetype'),
+         url('fonts/rosarivo/Rosarivo-Regular-webfont.svg#RosarivoRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'RosarivoItalic';
+    src: url('fonts/rosarivo/Rosarivo-Italic-webfont.eot');
+    src: url('fonts/rosarivo/Rosarivo-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/rosarivo/Rosarivo-Italic-webfont.woff') format('woff'),
+         url('fonts/rosarivo/Rosarivo-Italic-webfont.ttf') format('truetype'),
+         url('fonts/rosarivo/Rosarivo-Italic-webfont.svg#RosarivoItalic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'GoudyBookletter1911Regular';
+    src: url('fonts/goudy-bookletter/goudy_bookletter_1911-webfont.eot');
+    src: url('fonts/goudy-bookletter/goudy_bookletter_1911-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/goudy-bookletter/goudy_bookletter_1911-webfont.woff') format('woff'),
+         url('fonts/goudy-bookletter/goudy_bookletter_1911-webfont.ttf') format('truetype'),
+         url('fonts/goudy-bookletter/goudy_bookletter_1911-webfont.svg#GoudyBookletter1911Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@mixin theano_old_style {
+	font-family: 'TheanoOldStyleRegular', "Lucida Console", "Lucida Sans Typewriter", Monaco, "Bitstream Vera Sans Mono", monospace;
+}
+
+@mixin rosarivo {
+	font-family: 'RosarivoRegular', Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
+}
+
+@mixin rosarivo_italic {
+	font-family: 'RosarivoItalic', Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
+	font-style: italic;
+}
+
+@mixin goudy_bookletter {
+	font-family: 'GoudyBookletter1911Regular', "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;
+}
+
+@mixin helvetica {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+* { outline: none !important; }
+
+body { font-size: 62.5%; }
+
+.opt-3 {
+	h1 {
+		@include goudy_bookletter;
+		font-size: 4em;
+	}
+
+	h2 {
+		@include helvetica;
+		font-size: 1.8em;
+	}
+
+	h3 {
+		@include helvetica;
+		font-size: 1.6em;
+	}
+
+	p {
+		@include helvetica;
+		font-size: 1.4em;
+		line-height: 1.4em;
+	}
+
+	#form3 {
+		label {
+			@include goudy_bookletter;
+			font-size: 1.8em;
+		}
+
+		input, textarea {
+			@include helvetica;
+			padding: 0.25em;
+			font-size: 1.8em;
+		}
+	}
+
+}
